@@ -1,8 +1,15 @@
-from random import choice
+from random import randint
+from time import sleep
 
-# create a list of weeks and a list of questions
-weeks = [1, 2, 3, 4, 5, 7, 8, 9, 10]
-questions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# input find the number of weeks and number of questions
+print("Number of Weeks: ", end="")
+weeks = int(input())
+print("Number of Questions: ", end="")
+questions = int(input())
 
 # print a random question from a random week
-print(f"MMAN3400: Complete Question {choice(questions)} from Week {choice(weeks)}")
+while True:
+    print(f"MMAN3400: Complete Question {randint(1, questions)} from Week {randint(1, weeks)}")
+    print(f"Expected time to complete question [minutes]: ", end="")
+    dur = int(input())
+    sleep(dur * 60)
