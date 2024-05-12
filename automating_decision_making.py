@@ -14,6 +14,7 @@ for i in range(1, num_weeks + 1):
         key = "{:02d}".format(i) + "{:02d}".format(j)
         my_dict[key] = "incomplete"
 
+count = 0
 # print a random question from a random week
 while True:
     cur_question = randint(1, num_questions)
@@ -21,7 +22,11 @@ while True:
     key = "{:02d}".format(cur_question) + "{:02d}".format(cur_week)
 
     # if question has already been completed, generate a new question
-    if my_dict[key] == "complete":
+    if count == (num_weeks * num_questions):
+        print("ALL QUESTIONS COMPLETED")
+        break
+    elif my_dict[key] == "complete":
+        count+=1
         continue
     else:
         print(f"MMAN3400: Complete Question {cur_question} from Week {cur_week}")
