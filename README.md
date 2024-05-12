@@ -11,3 +11,13 @@ I used the "random" library to produce a random week and a random question. This
 2. Run the program and enter integer values for the prompts concerning number of questions and number of weeks.
 3. After the random question and corresponding week has been generated, enter how long you expect the question to last.
 4. After that time has passed, a new question will be generated. Continue this loop until you feel confident :)
+
+## Constraints
+The number of weeks must be less than 100.
+The number of questions must be less than 100.
+
+## Latest Implementations/Problems
+A dictionary is used to keep track of which questions have been completed.
+Once all questions have been completed, the program enters an infinite a loop.
+
+There are plans to implement a binary search algorithm somehow, I am not sure yet.
